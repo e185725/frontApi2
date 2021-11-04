@@ -3,7 +3,7 @@ import Home from './components/Home';
 import Post from './components/Post';
 import Header from './components/Header';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import registerForm from './components/registerForm';
+import {RegisterForm2} from './components/RegisterForm2';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Route path="/" exact component={Home} />
         <Route path="/post/:postId/" component={Post} />
-        <Route path="/new" component={registerForm} />
+        <Route path="/new" render={() => (<RegisterForm2 />)} />
       </div>
     </Router>
   );

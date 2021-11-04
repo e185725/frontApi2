@@ -10,23 +10,26 @@ import App2 from './components/App';
 import {addTodo} from './actions';
 import reducers from './reducers';
 
-let store = createStore(reducers);
+//let store = createStore(reducers);
+import store from "./components/store"
 
 
-/*
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store} >
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-*/
-ReactDOM.render(
-  <Provider store={store}>
-    <App2 />
-  </Provider>,
-  document.getElementById('root')
-);
+
+
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <App2 />
+//   </Provider>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
